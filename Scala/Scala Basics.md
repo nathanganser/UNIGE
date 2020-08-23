@@ -12,8 +12,8 @@ def sumOfSquare(x: Double, y: Double) = square(x) + square(y)
 def abs(x: Int) = if (x >= 0) x else -x
 ```
 ``` 
-def and1(x: Boolean, y: Boolean) = if (x) if (y) true else false else false
+def or(x: Boolean, y: Boolean) = if (x) true else if (y) true false
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMzk3MzM2Niw5MjE1Mzc4ODRdfQ==
+eyJoaXN0b3J5IjpbLTY5OTk4NDg0OSw5MjE1Mzc4ODRdfQ==
 -->
