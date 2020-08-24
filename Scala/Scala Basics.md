@@ -38,7 +38,14 @@ def sqrt(x: Double) = {
   
 sqrt(0.0004)
 ```
+
+## Greatest common denominator
+```
+def gcd(a: Int, b: Int): Int =  
+  if (b ==0) a else gcd(b, a % b)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDIwMjA0NiwtMTY1NTU1MzEzLC0xMz
-U4Mjk2MzEwLDE4MTMxNzMxNjAsOTIxNTM3ODg0XX0=
+eyJoaXN0b3J5IjpbMTM0MDI0MzgxNCwtNjE0MjAyMDQ2LC0xNj
+U1NTUzMTMsLTEzNTgyOTYzMTAsMTgxMzE3MzE2MCw5MjE1Mzc4
+ODRdfQ==
 -->
