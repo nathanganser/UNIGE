@@ -16,7 +16,27 @@ if you replace `y: Boolean` by `y: => Boolean` it will become a `call by name` p
 ``` 
 def and(x: Boolean, y: Boolean) = if (x) y else false
 ```
+
+## Square root
+```
+def abs(x: Double) =  
+  if (x>0) x else -x  
+  
+def isGoodEnough(guess: Double, x: Double): Boolean =  
+  if (abs(x - guess*guess) / x < 0.00000000000001) true else false  
+  
+def improve(guess: Double, x: Double): Double =  
+  (x/guess + guess)/2  
+  
+def sqrtIter(guess: Double, x: Double): Double =  
+  if (isGoodEnough(guess, x)) guess else  
+  sqrtIter(improve(guess, x), x)  
+  
+def sqrt(x: Double) = sqrtIter(1, x)  
+  
+sqrt(0.0004)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTgyOTYzMTAsMTgxMzE3MzE2MCw5Mj
-E1Mzc4ODRdfQ==
+eyJoaXN0b3J5IjpbLTE2NTU1NTMxMywtMTM1ODI5NjMxMCwxOD
+EzMTczMTYwLDkyMTUzNzg4NF19
 -->
