@@ -22,21 +22,23 @@ def and(x: Boolean, y: Boolean) = if (x) y else false
 def abs(x: Double) =  
   if (x>0) x else -x  
   
-def isGoodEnough(guess: Double, x: Double): Boolean =  
+def sqrt(x: Double) = {  
+  def isGoodEnough(guess: Double): Boolean =  
   if (abs(x - guess*guess) / x < 0.00000000000001) true else false  
   
-def improve(guess: Double, x: Double): Double =  
+ def improve(guess: Double): Double =  
   (x/guess + guess)/2  
   
-def sqrtIter(guess: Double, x: Double): Double =  
-  if (isGoodEnough(guess, x)) guess else  
-  sqrtIter(improve(guess, x), x)  
+  def sqrtIter(guess: Double): Double =  
+  if (isGoodEnough(guess)) guess else  
+  sqrtIter(improve(guess))  
   
-def sqrt(x: Double) = sqrtIter(1, x)  
+  sqrtIter(1)  
+}  
   
 sqrt(0.0004)
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTU1NTMxMywtMTM1ODI5NjMxMCwxOD
-EzMTczMTYwLDkyMTUzNzg4NF19
+eyJoaXN0b3J5IjpbLTYxNDIwMjA0NiwtMTY1NTU1MzEzLC0xMz
+U4Mjk2MzEwLDE4MTMxNzMxNjAsOTIxNTM3ODg0XX0=
 -->
